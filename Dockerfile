@@ -7,6 +7,6 @@ RUN npm install --production
 
 COPY . .
 
-EXPOSE 4957
+EXPOSE 80
 
 CMD [ "node", "app.js" ]
