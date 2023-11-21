@@ -1,7 +1,7 @@
 From node:16.17.1
 ENV NODE_ENV=production
 
-COPY ["packege.json","packege-lock.json", "./"]
+COPY ["package.json","package-lock.json", "./"]
 
 RUN npm install --production
 
