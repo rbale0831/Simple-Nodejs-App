@@ -1,4 +1,4 @@
-From node:16.17.1
+From node:18.18.2
 ENV NODE_ENV=production
 
 COPY ["package.json","package-lock.json", "./"]
