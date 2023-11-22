@@ -7,6 +7,6 @@ app.get('/', (req,res) => {
     res.send('Hello World from AWS Fargate!');
 });
 
-app.listen(PORT, function (){
+app.listen(PORT, () => {
     console.log(`App running on ${PORT}`);
 });
