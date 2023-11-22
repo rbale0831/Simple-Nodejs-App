@@ -1,12 +1,18 @@
-From node:18.9.1
+#Base image
+FROM node:18.9.1
+
+#Create a Node Environament
 ENV NODE_ENV=production
 
-COPY ["package.json","package-lock.json", "./"]
+#Install app dependencies
+COPY package*.json ./
 
+#Run npm install in production env
 RUN npm install --production
 
+#Bundle app source
 COPY . .
 
-EXPOSE 80
+EXPOSE 8888
 
-CMD [ "node", "app.js" ]
+CMD [ "npm", "start" ]

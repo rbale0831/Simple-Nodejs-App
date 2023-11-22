@@ -1,10 +1,12 @@
-const express = require('express')
+import express from "express";
+
+const PORT = process.env.PORT || 8888;
 const app = express();
 
-app.get('/', function (req,res){
+app.get('/', (req,res) => {
     res.send('Hello World from AWS Fargate!');
 });
 
-app.listen(80, function (){
-    console.log('App listening on port 80!');
+app.listen(PORT, function (){
+    console.log(`App running on ${PORT}`);
 });
